@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヅエヴィ国債高価大学</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 60px;
+}
+
+header {
+    background-color: #ffffff;
+    color: #004080;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+} 
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.hero {
+    background: url('campus.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #004080;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-bottom: 4px solid #004080;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.section {
+    padding: 60px 0;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.about {
+    padding: 60px 0;
+    width: 80%;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #004080;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+    .section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #004080;
+    font-weight: bold;
+}
+
+.campus-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.campus{
+    width: 45%;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.campus h3 {
+    font-size: 20px;
+    color: #004080;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.campus p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+
+.past-papers ul li a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+    .past-papers ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.past-papers ul li a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+.past-papers {
+    display: flex;
+    justify-content: space-around; /* 要素の間隔を均等に配置 */
+    gap: 20px; /* 学部間の隙間を20pxに設定 */
+    flex-wrap: wrap;
+}
+
+.past-papers div {
+    flex: 1; /* 各学部リストの幅を自動調整 */
+    margin-bottom: 20px;
+    max-width: 48%; /* 各リストの最大幅を48%に設定し、隙間が大きくならないようにする */
+}
+
+.past-papers h3 {
+    font-size: 24px;
+    color: #004080;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003060;
+}
+
+#form-message {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #004080;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 4px solid #004080;
+    font-size: 14px;
+    font-weight: bold;
+}
+.sintei{
+    margin-right: 150px;
+    font-size: 15px;
+}
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1>ヅエヴィ国債高価大学</h1>
+            <h2 class="sintei">学校法人 進定学園</h2>
+            <nav>
+                <ul>
+                    <li><a href="#home">ホーム</a></li>
+                    <li><a href="#campus">キャンパス</a></li>
+                    <li><a href="#past-papers">過去問</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>未来を築く、知識の力<p style="color: #004080;">StedTechグループ 学校法人進定学園</p></h2>
+        </section>
+
+        <section id="about" class="about">
+    <h2>本校の紹介</h2>
+    <p>ヅエヴィ国債高価大学は次世代のキチガイを育成することを目標としたドFラン大学です。</p>
+    <p>できるだけ入試問題をアタオカにして、偏差値はかなり高いが問題の知能指数が下過ぎる問題を解いてきた猛者が集っています。</p>
+</section>
+
+        
+        <section id="campus" class="section">
+            <h2>キャンパス一覧</h2>
+            <div class="campus-list">
+                <div class="campus">
+                    <h3>本校キャンパス</h3>
+                    <p>住所: 杖日県杖日市杖日町杖日2-2-2</p>
+                    <p>施設: 図書館、研究棟、学生寮、大講堂</p>
+                </div>
+                <div class="campus">
+                    <h3>ナガシマスパーランド前キャンパス</h3>
+                    <p>住所: 三重県桑名市長島町杖日1-1-1</p>
+                    <p>施設: 学生寮、危険物取扱実験場、講堂</p>
+                </div>
+                <div class="campus">
+                    <h3>ナガシマスパーランド前キャンパス前キャンパス</h3>
+                    <p>住所: 三重県桑名市長島町杖日1-2-1</p>
+                    <p>施設: 国債研究室センター、講堂</p>
+                </div>
+                <div class="campus">
+                   <h3>StedTechオフィス前キャンパス</h3> 
+                    <p>住所: 杖日県杖日市杖日町進定2-2-2</p>
+                    <p>施設: 情報技術学部CALL教室、講堂、学生寮</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="past-papers" class="section">
+            <h2>過去問</h2>
+            <p style="color: red;"></p>
+            <div class="past-papers">
+                <h3>総合入試問題</h3>
+                
+                <ul>
+                    <li><a href="2024.pdf">2024年度一次過去問<span>(修正済第二十六版)</span></a></li>
+                    <li><a href="2024a.pdf">2024年度一次過去問回答(第一版別版同回答)</a></li>
+                </ul>
+                
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>お問い合わせ</h2>
+            <p>実際にお問い合わせはできません。</p>
+            <form id="contact-form">
+                <label for="name">お名前:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">メッセージ:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">送信</button>
+            </form>
+            <div id="form-message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 ヅエヴィ国債高価大学/StedTech. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
